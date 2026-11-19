@@ -1,0 +1,29 @@
+{
+    "link_health": {
+        "name": "link_health",
+        "display_name": "Link Health",
+        "type": "PRO",
+        "visibility": "PUB",
+        "allow_many": true,
+        "description": "Reports the communications link and power health of a remote field node from the values relayed in its messages.",
+        "long_description": "README.md",
+        "depends_on": [],
+        "organisation_id": 93957122026437134,
+        "export_config_command": "export-config-processor",
+        "export_ui_command": "export-ui-processor",
+        "export_notification_command": "export-notifications",
+        "lambda_config": {
+            "Environment": {},
+            "Runtime": "python3.13",
+            "Timeout": 300,
+            "Handler": "src.link_health.handler",
+            "MemorySize": 128,
+            "Architectures": [
+                "arm64"
+            ]
+        },
+        "repository_url": "https://github.com/getdoover/link-health",
+        "data_access": "read_only",
+        "has_ui": true
+    }
+}
