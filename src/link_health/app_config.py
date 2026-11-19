@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from pydoover import config
-from pydoover.config import ApplicationPosition
+from pydoover.config import ApplicationDefaultOpen, ApplicationPosition
 from pydoover.processor import ManySubscriptionConfig, ScheduleConfig
 
 
@@ -188,7 +188,8 @@ class LinkHealthConfig(config.Schema):
         position=18,
     )
 
-    position = ApplicationPosition(position=19)
+    position = ApplicationPosition(default=900, position=19)
+    default_open = ApplicationDefaultOpen(default=False, position=20)
 
 
 def export():

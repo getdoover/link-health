@@ -52,6 +52,8 @@ Every input is a **message path**, `$<channel>.<path.to.value>`, read from messa
 | **Link Success Poor (%)** | Below this reads Poor | `50` |
 | **Subscription** *(advanced)* | Channels to read messages from | `["io_state"]` |
 | **Schedule** *(advanced)* | How often to re-check the status without a message | `rate(5 minutes)` |
+| **Position** *(hidden)* | Where the app sits on the device page; smaller is higher. Defaults low on the page | `900` |
+| **Default Open** *(hidden)* | Whether the app's panel starts expanded | `false` |
 
 A message counts as a report from the node only when it carries at least one configured value. A report older than the last one (by its last-heard time) is ignored, so a replayed message cannot move the status backwards.
 
