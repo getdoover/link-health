@@ -18,25 +18,25 @@ class Value:
 
 class FakeConfig:
     def __init__(self, **overrides):
-        values = dict(
-            battery_voltage_path="$io_state.battery_v",
-            link_success_path="$io_state.link_success_pct",
-            success_count_path="",
-            attempt_count_path="",
-            counter_type=CounterType.CUMULATIVE,
-            retries_path="$io_state.retries",
-            rssi_path="$io_state.rssi",
-            snr_path="",
-            route_path="$io_state.route",
-            last_heard_path="$io_state.last_heard",
-            expected_interval_min=15.0,
-            late_after_intervals=2.0,
-            offline_after_intervals=4.0,
-            battery_low_v=9.5,
-            battery_high_v=14.5,
-            link_warn_pct=80.0,
-            link_poor_pct=50.0,
-        )
+        values = {
+            "battery_voltage_path": "$io_state.battery_v",
+            "link_success_path": "$io_state.link_success_pct",
+            "success_count_path": "",
+            "attempt_count_path": "",
+            "counter_type": CounterType.CUMULATIVE,
+            "retries_path": "$io_state.retries",
+            "rssi_path": "$io_state.rssi",
+            "snr_path": "",
+            "route_path": "$io_state.route",
+            "last_heard_path": "$io_state.last_heard",
+            "expected_interval_min": 15.0,
+            "late_after_intervals": 2.0,
+            "offline_after_intervals": 4.0,
+            "battery_low_v": 9.5,
+            "battery_high_v": 14.5,
+            "link_warn_pct": 80.0,
+            "link_poor_pct": 50.0,
+        }
         values.update(overrides)
         for key, value in values.items():
             setattr(self, key, Value(value))
