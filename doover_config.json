@@ -8,7 +8,7 @@
         "description": "Reports the communications link and power health of a remote field node from the values relayed in its messages.",
         "long_description": "README.md",
         "depends_on": [],
-        "organisation_id": 93957122026437134,
+        "organisation_id": null,
         "export_config_command": "export-config-processor",
         "export_ui_command": "export-ui-processor",
         "export_notification_command": "export-notifications",
